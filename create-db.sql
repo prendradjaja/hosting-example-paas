@@ -1,0 +1,3 @@
+CREATE TABLE message (
+  body VARCHAR(1000) NOT NULL
+);
