@@ -9,7 +9,7 @@ function main() {
   }
 
   const app = express();
-  const PORT = 8000;
+  const PORT = process.env.PORT || 8000;
 
   const db = new pg.Pool({
     connectionString: DATABASE_URL,
