@@ -13,6 +13,9 @@ function main() {
 
   const db = new pg.Pool({
     connectionString: DATABASE_URL,
+    ssl: {
+      rejectUnauthorized: false,
+    },
   });
 
   app.use(express.static('./public'));
