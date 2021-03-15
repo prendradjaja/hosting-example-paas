@@ -7,15 +7,18 @@ function main() {
     console.error("FATAL: No DATABASE_URL environment variable was provided");
     return;
   }
+  let sslEnabled = true;
+  if (process.env.SSL === 'false') {
+    sslEnabled = false;
+  }
+  const sslConfig = sslEnabled ? { rejectUnauthorized: false } : undefined;
 
   const app = express();
   const PORT = process.env.PORT || 8000;
 
   const db = new pg.Pool({
     connectionString: DATABASE_URL,
-    ssl: {
-      rejectUnauthorized: false,
-    },
+    ssl: sslConfig,
   });
 
   app.use(express.static('./public'));
