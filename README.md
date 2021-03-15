@@ -41,10 +41,10 @@ Requirements:
 1. Clone this repo and `cd` into it. The rest of these commands should be run
    from this directory.
 2. Create an app: `heroku create`
-  - You'll have to create a free Heroku account.
-  - This application should not exceed usage limits for the free tier.
+    - You'll have to create a free Heroku account.
+    - This application should not exceed usage limits for the free tier.
 3. Provision a database as a Heroku add-on: `heroku addons:create
    heroku-postgresql:hobby-dev`
-  - This uses the "hobby dev" (free) tier for this add-on.
+    - This uses the "hobby dev" (free) tier for this add-on.
 4. Set up the database: `heroku pg:psql < create-db.sql`
 5. Deploy the application: `git push heroku master`
