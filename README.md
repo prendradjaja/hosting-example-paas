@@ -36,13 +36,13 @@ local`, which reads the `.env` file to provide environment variables.
 
 Requirements:
 
-- Heroku CLI
+- Heroku CLI and a free account
+
+Steps:
 
 1. Clone this repo and `cd` into it. The rest of these commands should be run
    from this directory.
 2. Create an app: `heroku create`
-    - You'll have to create a free Heroku account.
-    - This application should not exceed usage limits for the free tier.
 3. Provision a database as a Heroku add-on: `heroku addons:create
    heroku-postgresql:hobby-dev`
     - This uses the "hobby dev" (free) tier for this add-on.
